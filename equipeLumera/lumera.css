@@ -1,0 +1,38 @@
+@font-face {
+    font-family: Farro;
+    src: url(Farro-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+#logo{
+    height: 35px;
+}
+
+#container-fotos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    
+}
+.farro{
+    font-family: Farro;
+    color: #292D23;
+}
+.nomes{
+    font-family: Farro;
+}
+.membro{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.img-perfil{
+    display: flex;
+    width: 125px;
+    border-radius: 100%;
+}
+.icones{
+    width: 30px;
+}   
