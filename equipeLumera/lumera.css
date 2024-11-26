@@ -4,35 +4,53 @@
     font-weight: normal;
     font-style: normal;
 }
-#logo{
-    height: 35px;
-}
-
-#container-fotos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    
+html,body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 .farro{
     font-family: Farro;
     color: #292D23;
 }
-.nomes{
-    font-family: Farro;
-}
-.membro{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-.img-perfil{
-    display: flex;
-    width: 125px;
-    border-radius: 100%;
-}
-.icones{
-    width: 30px;
-}   
+#topo{
+        background-color: #284703 ;
+    }
+        #logo{ 
+        height: 50px;
+    }
+    #style{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+        h1{
+            font-size: 35px;
+        }
+        #guide{
+            height: 350px;
+        }
+    #container-fotos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+        .nomes{
+            font-family: Farro;
+        }
+        .membro{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .icones{
+            width: 30px;
+        }   
+        .img-perfil{
+            display: flex;
+            width: 125px;
+            border-radius: 100%;
+        }
