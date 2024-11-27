@@ -4,6 +4,9 @@
     font-weight: normal;
     font-style: normal;
 }
+#iconfav{
+    border-radius: 100%;
+}
 html,body {
     height: 100%;
     margin: 0;
