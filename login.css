@@ -119,3 +119,50 @@ html, body{
                 align-items: center;
                 justify-content: center;
             }
+        #tela2{
+            height: 90%;
+            background-color: palegoldenrod;
+            display: flex;
+        }
+            .fundo{
+                height: 100%;
+                width: 100%;
+                background-color: #F6FFF8;
+            }
+                #lista{
+                    color: #284703;
+                    font-size: 30px;
+                    font-family: ExpletusSans;
+                    margin: 15px 15px 15px 15px;
+                }
+        #tela3{
+            height: 90%;
+            background-color: lawngreen;
+            display: flex;
+            align-items: center;
+        }
+            #tela3esquerda{
+                height: 100%;
+                width: 50%;
+                background-color: #F6FFF8;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+            #tela3direita{
+                height: 100%;
+                width: 50%;
+                background-color: #F6FFF8;
+            }
+        #tela4{
+            height: 90%;
+            background-color: fuchsia;
+            display: flex;
+        }
+            #excluir{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
