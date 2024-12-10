@@ -54,6 +54,7 @@ html, body{
             height: 90%;
             background-color: pink;
             display: flex;
+             
         }
             #meioesquerda{
                 background-color: aqua;
@@ -123,6 +124,7 @@ html, body{
             height: 90%;
             background-color: palegoldenrod;
             display: flex;
+            display: none;
         }
             .fundo{
                 height: 100%;
@@ -140,6 +142,7 @@ html, body{
             background-color: lawngreen;
             display: flex;
             align-items: center;
+            display: none;
         }
             #tela3esquerda{
                 height: 100%;
@@ -159,6 +162,7 @@ html, body{
             height: 90%;
             background-color: fuchsia;
             display: flex;
+            display: none;
         }
             #excluir{
                 display: flex;

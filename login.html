@@ -8,25 +8,27 @@
     <title>Demétris Bank</title>
 </head>
 <body>
-    <div id="conteiner">
+    <div id="conteiner"> 
         <div id="topo">
             <div id="topoesquerda">
                 <img src="logo.jpg" alt="Logo Demétris">
             </div>
             <div id="topomeio">
-                <button class="button"><img id="iconhome" src="home.png" alt="Home"></button>
-                <button class="button">EDITAR</button>
-                <button class="button">LISTAR</button>
-                <button class="button">EXCLUIR</button>
+                <button class="button"><img id="iconhome" src="home.png" alt="Home" onclick="paginacadastrar()"></button>
+                <button class="button" onclick="paginaeditar()">EDITAR </button>
+                <button class="button" onclick="paginalistar()">LISTAR</button>
+                <button class="button" onclick="paginaexcluir()">EXCLUIR</button>
             </div>
         </div>
         <div id="tela1">
             <div id="meioesquerda">
                 <div id="cadastro">
-                    <div class="inputimg">
+                    <div class="inputimg">   
+
                 <img class="icones" src="perfil.png" alt="">
-                <input class="input" placeholder="NOME" type="text">
+                <input class="input" id="inputnome" placeholder="NOME" type="text">
                     </div>
+                    
                     <div class="inputimg">
                 <img class="icones" src="cadeado.png" alt="">
                 <input class="input" placeholder="SENHA" type="password">
@@ -39,7 +41,7 @@
 
                     <div id="buttons">
 
-                <button class="cadlog">CADASTRAR</button>
+                <button class="cadlog" onclick="cadastrar()">CADASTRAR</button>
 
                 <label id="ahaa">Já tenho uma conta.</label>
                 <button class="cadlog">ENTRAR</button>
@@ -106,6 +108,6 @@
 
         </div>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
