@@ -1,9 +1,12 @@
-cadastros = []
+nomes = []
+senhas = []
 
 function cadastrar() {
 
-    let usuario = gerarUsuario()
-    cadastros.push(usuario)
+    let nome, senha = gerarUsuario()
+    nomes.push(nome)
+    senhas.push(senha)
+
 
 }
 
@@ -13,29 +16,34 @@ function gerarUsuario() {
     let camposenha = document.getElementById('inputsenha')
     let camporepitasenha = document.getElementById('inputrepitasenha')
 
-    let nome = camponome.value.toLowerCase()
+    let nome = camponome.value
     let senha = camposenha.value
     let repitasenha = camporepitasenha.value
 
     usuario = { nome, senha }
 
-    camponome.value = null
-    camporepitasenha.value = null
-    camposenha.value = null
+    let posnome = nome.indexOf(nome)
+    let possenha = senha.indexOf(senha)
 
-    let pos = cadastros.indexOf(senha, nome)
     if (nome != null && senha != null) {
 
-        if (pos == -1) {
+        if (posnome == -1) {
 
-            if (repitasenha == senha) {
+            if (possenha == -1) {
 
-                return usuario
+                if (repitasenha == senha) {
 
-            } else {
+                    camponome.value = null
+                    camporepitasenha.value = null
+                    camposenha.value = null
 
-                alert('ta errado zé')
+                    return { nome, senha }
 
+                } else {
+
+                    alert('ta errado')
+
+                }
             }
         }
     }
@@ -55,13 +63,13 @@ function paginalistar() {
     document.getElementById("tela2").style.display = 'flex'
 }
 
-function listar() {
-    let convidados = "----------"
+function entrar() {
+    let lista = "----------"
 
-    for (let item of cadastros) {
-        convidados += "<br>" + item.toUpperCase() + "<br>----------"
+    for (let item of nome && senha) {
+        lista += "<br>" + item + "<br>----------"
     }
-    lista.innerHTML = convidados
+    listagem.innerHTML = lista
 }
 
 function paginaeditar() {
