@@ -59,7 +59,7 @@ function gerarUsuario() {
     }
 }
 
-function entrar() {
+function listar() {
         let lista = "----------"
     
         let item = nomes[nomes.length -1].nome
@@ -95,6 +95,7 @@ function paginalistar() {
 
     esconder()
     document.getElementById("tela2").style.display = 'flex'
+    listar()
 }
 
 
