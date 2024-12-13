@@ -16,13 +16,12 @@
                 <img src="logo.jpg" alt="Logo Demétris">
             </div>
             <div id="topomeio">
-                <button class="button" onclick="paginacadastrar()"><img id="iconhome" src="home.png"
-                        alt="Home"></button>
+                <button class="button" onclick="paginacadastrar()"><img id="iconhome" src="home.png" alt="Home"></button>
                 <button class="button" onclick="paginaeditar()">EDITAR </button>
                 <button class="button" onclick="paginalistar()">LISTAR</button>
                 <button class="button" onclick="paginaexcluir()">EXCLUIR</button>
             </div>
-        </div>
+        </div>  
         <div id="tela1">
             <div id="meioesquerda">
                 <div class="bordinha">
@@ -32,26 +31,26 @@
                             <div class="inputimg">
 
                                 <img class="icones" src="perfil.png" alt="">
-                                <input class="input" id="inputnome" placeholder="NOME" type="text">
+                                <input class="input" id="inputnome" id="inputnome" placeholder="NOME" type="text">
                             </div>
 
                             <div class="inputimg">
                                 <img class="icones" src="cadeado.png" alt="">
-                                <input class="input" placeholder="SENHA" type="password">
+                                <input class="input" id="inputsenha" placeholder="SENHA" type="password">
                             </div>
                             <div class="inputimg">
                                 <img class="icones" src="cadeado.png" alt="">
-                                <input class="input" placeholder="DIGITE A SENHA NOVAMENTE" type="password">
+                                <input class="input" id="inputrepitasenha" placeholder="DIGITE A SENHA NOVAMENTE" type="password">
                             </div>
                         </div>
                     </div>
 
                     <div id="buttons">
 
-                        <button class="cadlog" onclick="cadastrar()">CADASTRAR</button>
+                        <button class="cadlog" onclick="cadatrar()">CADASTRAR</button>
 
                         <label id="ahaa">Já tenho uma conta.</label>
-                        <button class="cadlog">ENTRAR</button>
+                        <button onclick="entrar()" class="cadlog">ENTRAR</button>
                     </div>
                 </div>
             </div>
@@ -64,9 +63,8 @@
         </div>
         <div id="tela2">
             <div class="fundo">
-                <div id="lista">
-                    LISTA:
-                </div>
+                    <label id="lista">LISTA:</label>
+                    <p id="listagem">----------</p>
             </div>
         </div>
         <div id="tela3">
