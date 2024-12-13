@@ -3,52 +3,86 @@ senhas = []
 
 function cadastrar() {
 
-    let nome, senha = gerarUsuario()
+    let nome = gerarUsuario()
+
+    let senha = gerarSenhaUsuario()
+
     nomes.push(nome)
+
     senhas.push(senha)
 
+}
 
+function gerarSenhaUsuario() {
+
+    let camposenha = document.getElementById('inputsenha')
+    let camporepitasenha = document.getElementById('inputrepitasenha')
+
+    let senha = camposenha.value
+    let repitasenha = camporepitasenha.value
+
+    let possenha = senhas.indexOf(senha)
+
+    if (possenha == -1) {
+
+        if (repitasenha == senha) {
+
+            camporepitasenha.value = null
+            camposenha.value = null
+
+            return { senha }
+
+        } else {
+
+            alert('ta errado')
+
+        }
+    }
 }
 
 function gerarUsuario() {
 
     let camponome = document.getElementById('inputnome')
-    let camposenha = document.getElementById('inputsenha')
-    let camporepitasenha = document.getElementById('inputrepitasenha')
-
     let nome = camponome.value
-    let senha = camposenha.value
-    let repitasenha = camporepitasenha.value
 
-    usuario = { nome, senha }
+    let posnome = nomes.indexOf(nome)
 
-    let posnome = nome.indexOf(nome)
-    let possenha = senha.indexOf(senha)
-
-    if (nome != null && senha != null) {
+    if (nome != null) {
 
         if (posnome == -1) {
 
-            if (possenha == -1) {
+            camponome.value = null
 
-                if (repitasenha == senha) {
+            return { nome }
 
-                    camponome.value = null
-                    camporepitasenha.value = null
-                    camposenha.value = null
-
-                    return { nome, senha }
-
-                } else {
-
-                    alert('ta errado')
-
-                }
-            }
         }
     }
 }
 
+function entrar() {
+        let lista = "----------"
+    
+        let item = nomes[nomes.length -1].nome
+            lista +=  '<br>' + item + "<br>----------"
+        
+        listagemnomes.innerHTML = lista
+
+        let lista2 = "----------"
+    
+        let item2 = senhas[senhas.length -1].senha
+
+            lista2 +=  "<br>" + item2 + "<br>----------"
+        
+        listagemsenhas.innerHTML = lista2
+    
+}
+
+function paginaeditar() {
+
+    esconder()
+    document.getElementById('tela3').style.display = 'flex'
+
+}
 
 function paginacadastrar() {
 
@@ -61,22 +95,6 @@ function paginalistar() {
 
     esconder()
     document.getElementById("tela2").style.display = 'flex'
-}
-
-function entrar() {
-    let lista = "----------"
-
-    for (let item of nome && senha) {
-        lista += "<br>" + item + "<br>----------"
-    }
-    listagem.innerHTML = lista
-}
-
-function paginaeditar() {
-
-    esconder()
-    document.getElementById('tela3').style.display = 'flex'
-
 }
 
 
