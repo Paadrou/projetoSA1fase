@@ -14,7 +14,18 @@ body {
     margin: 0;
     padding: 0;
 }
+.bordinha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50%;
+    width: 40%;
+    background-color: rgb(74, 112, 28, 0.5);
+    border:#284703 1px solid;
+    border-radius: 5%;
 
+}
 #conteiner {
     height: 100%;
     background-color: #ff0000;
@@ -68,6 +79,10 @@ body {
 }
 
 #meioesquerda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6FFF8;
     background-color: aqua;
     height: 100%;
     width: 50%;
@@ -79,6 +94,18 @@ body {
     height: 50%;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    background: none;
+}
+
+.inputsimgs {
+    margin-bottom: 20px;
+}
+
+.inputimg {
+    margin-top: 15px;
     gap: 10px;
     flex-direction: column;
     align-items: center;
@@ -88,11 +115,19 @@ body {
 .input {
     width: 200px;
     height: 10px;
-    margin: 0px 0px 10px 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background: none;
+}
+
+.input:focus {
+    outline: none;
 }
 
 .icones {
-    width: 50px;
+    width: 25px;
+    margin: 0px 0px 10px 0px;
 }
 
 #buttons {
@@ -101,6 +136,7 @@ body {
     background-color: #F6FFF8;
     display: flex;
     flex-direction: column;
+    background: none;
 }
 
 .cadlog {
@@ -120,7 +156,7 @@ body {
 }
 
 #ahaa {
-    margin: 10px 0px 0px 0px;
+    margin: 30px 0px 0px 0px;
     align-self: center;
     font-family: Farro-Regular;
     color: #292D23;
@@ -185,6 +221,16 @@ body {
 
 #tela4 {
     height: 90%;
+    background-color: #F6FFF8;
+    display: flex;
+    display: none;
+}
+#tela4esquerda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
     background-color: fuchsia;
     display: flex;
     display: none;
