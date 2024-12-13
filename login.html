@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,90 +7,78 @@
     <link rel="shortcut icon" href="iconfav.png" type="image/x-icon">
     <title>Demétris Bank</title>
 </head>
-
 <body>
-    <div id="conteiner">
+    <div id="conteiner"> 
         <div id="topo">
             <div id="topoesquerda">
                 <img src="logo.jpg" alt="Logo Demétris">
             </div>
             <div id="topomeio">
-                <button class="button" onclick="paginacadastrar()"><img id="iconhome" src="home.png"
-                        alt="Home"></button>
+                <button class="button" onclick="paginacadastrar()"><img id="iconhome" src="home.png" alt="Home"></button>
                 <button class="button" onclick="paginaeditar()">EDITAR </button>
                 <button class="button" onclick="paginalistar()">LISTAR</button>
                 <button class="button" onclick="paginaexcluir()">EXCLUIR</button>
             </div>
-        </div>
+        </div>  
         <div id="tela1">
             <div id="meioesquerda">
-                <div class="bordinha">
-                    <div id="cadastro">
+                <div id="cadastro">
+                    <div class="inputimg">   
 
-                        <div class="inputsimgs">
-                            <div class="inputimg">
-
-                                <img class="icones" src="perfil.png" alt="">
-                                <input class="input" id="inputnome" placeholder="NOME" type="text">
-                            </div>
-
-                            <div class="inputimg">
-                                <img class="icones" src="cadeado.png" alt="">
-                                <input class="input" placeholder="SENHA" type="password">
-                            </div>
-                            <div class="inputimg">
-                                <img class="icones" src="cadeado.png" alt="">
-                                <input class="input" placeholder="DIGITE A SENHA NOVAMENTE" type="password">
-                            </div>
-                        </div>
+                <img class="icones" src="perfil.png" alt="">
+                <input class="input" id="inputnome" placeholder="NOME" type="text">
                     </div>
+                    
+                    <div class="inputimg">
+                <img class="icones" src="cadeado.png" alt="">
+                <input class="input" id="inputsenha" placeholder="SENHA" type="password">
+                    </div>
+                    <div class="inputimg">
+                <img class="icones" src="cadeado.png" alt="">
+                <input class="input" id="inputrepitasenha" placeholder="DIGITE A SENHA NOVAMENTE" type="password">
+            </div>
+            </div>
 
                     <div id="buttons">
 
-                        <button class="cadlog" onclick="cadastrar()">CADASTRAR</button>
+                <button onclick="cadastrar()" class="cadlog">CADASTRAR</button>
 
-                        <label id="ahaa">Já tenho uma conta.</label>
-                        <button class="cadlog">ENTRAR</button>
-                    </div>
-                </div>
+                <label id="ahaa">Já tenho uma conta.</label>
+                <button onclick="entrar()" class="cadlog">ENTRAR</button>
+            </div>
             </div>
             <div id="meiodireita">
-
-                <label>Demétris Bank, <br>
-                    um banco que enche bolsos e geladeiras <br>
-                    através da doação de<br> alimentos. </label>
+                <label>Demétris Bank,<br>
+                    um banco que enche bolsos e geladeiras<br>
+                    através da doação de<br> alimentos.</label>
             </div>
         </div>
         <div id="tela2">
             <div class="fundo">
-                <div id="lista">
-                    LISTA:
-                </div>
+                    <label id="lista">LISTA:</label>
+                    <p id="listagemnomes">nomes</p>
+                    <p id="listagemsenhas">senhas</p>
             </div>
         </div>
         <div id="tela3">
             <div id="tela3esquerda">
-                <div class="bordinha">
-                    <div class="inputsimgs">
-                        <div class="inputimg">
-                            <img class="icones" src="perfil.png" alt="">
-                            <input class="input" placeholder="NOME COMPLETO" type="text">
-                        </div>
-                        <div class="inputimg">
-                            <img class="icones" src="cadeado.png" alt="">
-                            <input class="input" placeholder="DIGITE A SENHA" type="password">
-                        </div>
-                        <div class="inputimg">
-                            <img class="icones" src="perfil.png" alt="">
-                            <input class="input" placeholder="NOVO NOME" type="text">
-                        </div>
-                        <div class="inputimg">
-                            <img class="icones" src="cadeado.png" alt="">
-                            <input class="input" placeholder="NOVA SENHA" type="text">
-                        </div>
-                    </div>
-                    <button class="cadlog">EDITAR</button>
+                <div class="inputimg">
+                <img class="icones" src="perfil.png" alt="">
+                <input class="input" placeholder="NOME COMPLETO" type="text">
                 </div>
+                <div class="inputimg">
+                <img class="icones" src="cadeado.png" alt="">
+                <input class="input" placeholder="DIGITE A SENHA" type="password">
+                </div>
+                <div class="inputimg">
+                <img class="icones" src="perfil.png" alt="">
+                <input class="input" placeholder="NOVO NOME" type="text">
+                </div>
+                <div class="inputimg">
+                <img class="icones" src="cadeado.png" alt="">
+                <input class="input" placeholder="NOVA SENHA" type="text">
+                </div>
+                <button class="cadlog">EDITAR</button>
 
             </div>
             <div id="tela3direita">
@@ -99,36 +86,27 @@
             </div>
         </div>
         <div id="tela4">
-            <div id="tela4esquerda">
-                <div class="bordinha">
+            <div class="fundo">
                 <div id="excluir">
-                        <div class="inputsimgs">
-                            <div class="inputimg">
-                                <img class="icones" src="perfil.png" alt="">
-                                <input placeholder="NOME COMPLETO" class="input" type="text">
-                            </div>
-                            <div class="inputimg">
-                                <img class="icones" src="cadeado.png" alt="">
-                                <input placeholder="DIGITE A SENHA" class="input" type="password">
-                            </div>
-                            <div class="inputimg">
-                                <img class="icones" src="cadeado.png" alt="">
-                                <input placeholder="DIGITE A SENHA NOVAMENTE" class="input" type="password">
-                            </div>
-                        </div>
-                        <button class="cadlog">EXLUIR</button>
+                    <div id="inputimg">
+                    <img class="icones" src="perfil.png" alt="">
+                    <input placeholder="NOME COMPLETO" class="input" type="text">
                     </div>
+                    <div id="inputimg">
+                    <img class="icones" src="cadeado.png" alt="">
+                    <input placeholder="DIGITE A SENHA" class="input" type="password">
+                    </div>
+                    <div id="inputimg">
+                    <img class="icones" src="cadeado.png" alt="">
+                    <input placeholder="DIGITE A SENHA NOVAMENTE" class="input" type="password">
+                    </div>
+                    <button class="cadlog">EXLUIR</button>
 
                 </div>
 
-            </div>
-            <div id="tela4direita">
-                
             </div>
 
         </div>
     </div>
     <script src="script.js"></script>
 </body>
-
-</html>
