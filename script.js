@@ -3,13 +3,9 @@ senhas = []
 
 function cadastrar() {
 
-    let nome = gerarUsuario()
+    gerarUsuario()
 
-    let senha = gerarSenhaUsuario()
-
-    nomes.push(nome)
-
-    senhas.push(senha)
+    gerarSenhaUsuario()
 
 }
 
@@ -30,9 +26,10 @@ function gerarSenhaUsuario() {
             camporepitasenha.value = null
             camposenha.value = null
 
-            return { senha }
+            senhas.push(senha)
 
         } else {
+
 
             alert('ta errado')
 
@@ -53,28 +50,96 @@ function gerarUsuario() {
 
             camponome.value = null
 
-            return { nome }
+            nomes.push(nome)
+
+        }
+    }
+}
+
+function excluir() {
+
+    let camponome = document.getElementById('inputNomeExcluir')
+    let camposenha = document.getElementById('inputSenhaExcluir')
+    let camporepitasenha = document.getElementById('inputRepitaSenhaExcluir')
+
+    let nome = camponome.value
+    let senha = camposenha.value
+    let repitasenha = camporepitasenha.value
+
+    let posnome = nomes.indexOf(nome)
+    let possenha = senhas.indexOf(senha)
+
+    if (nome != "" && senha != "") {
+
+        if (repitasenha == senha) {
+
+            if (posnome != -1 && possenha != -1) {
+
+                camponome.value = null
+                camporepitasenha.value = null
+                camposenha.value = null
+
+                nomes.splice(posnome, 1)
+                senhas.splice(possenha, 1)
+
+            }
+        } else {
+            alert("ta errado")
+        }
+    }
+}
+
+function editar() {
+
+    let camponome = document.getElementById('inputEditarNome')
+    let camposenha = document.getElementById('inputEditarSenha')
+    let campoNovoNome = document.getElementById('inputEditarNovoNome')
+    let campoNovaSenha = document.getElementById('inputEditarNovaSenha')
+
+
+    let nome = camponome.value
+    let senha = camposenha.value
+    let novoNome = campoNovoNome.value
+    let novaSenha = campoNovaSenha.value
+
+    let posnome = nomes.indexOf(nome)
+    let possenha = senhas.indexOf(senha)
+
+    if (nome != "" && senha != "" && novoNome != '' && novaSenha != '') {
+
+        if (posnome != -1 && possenha != -1) {
+
+            camponome.value = null
+            camposenha.value = null
+            campoNovaSenha.value = null
+            campoNovoNome.value = null
+            
+
+            nomes(posnome) = novoNome
+            senhas(possenha) = novaSenha
+
+            alert(nomes)
+
 
         }
     }
 }
 
 function listar() {
-        let lista = "----------"
-    
-        let item = nomes[nomes.length -1].nome
-            lista +=  '<br>' + item + "<br>----------"
-        
-        listagemnomes.innerHTML = lista
 
-        let lista2 = "----------"
-    
-        let item2 = senhas[senhas.length -1].senha
+    listagemsenhas.HTML.remove()
 
-            lista2 +=  "<br>" + item2 + "<br>----------"
-        
-        listagemsenhas.innerHTML = lista2
-    
+    let item = nomes
+
+    let lista2 = "----------"
+
+    let item2 = senhas
+
+    lista2 += "<br>" + 'Usuario:' + item + ' Senha: ' + item2 + "<br>----------"
+
+
+    listagemsenhas.innerHTML = lista2
+
 }
 
 function paginaeditar() {
@@ -114,3 +179,4 @@ function esconder() {
     document.getElementById('tela4').style.display = 'none'
 
 }
+
