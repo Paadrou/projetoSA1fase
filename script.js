@@ -29,9 +29,7 @@ function gerarSenhaUsuario() {
             senhas.push(senha)
 
         } else {
-
-
-            alert('ta errado')
+            document.getElementById('senhacoincidecad').style.display = 'inline'
 
         }
     }
@@ -83,8 +81,12 @@ function excluir() {
                 senhas.splice(possenha, 1)
 
             }
-        } else {
-            alert("ta errado")
+        } else{
+            
+            document.getElementById('senhacoincideex').style.display = 'inline'
+            document.getElementById('senhacoincideex2').style.display = 'inline'
+            document.getElementById('nomecoincideex').style.display = 'inline'
+            
         }
     }
 }
