@@ -21,12 +21,6 @@ h1{
     font-size: 20px;
 }
 
-#pessoafeliz{
-    width: 100%;
-    opacity: 0.5;
-
-}
-
 .bordinha {
     display: flex;
     justify-content: center;
@@ -78,6 +72,17 @@ h1{
     align-items: center;
     border-radius: 25px;
     justify-content: center;
+}
+
+.button:hover{
+    background-color: rgb(74, 100, 28);
+    height: 55px;
+    width: 155px;
+    border-radius: 30px;
+}
+
+.button:focus{
+    background-color: rgb(74, 106, 28);
 }
 
 #iconhome {
@@ -164,6 +169,13 @@ h1{
     margin: 5px 0px 0px 0px;
 }
 
+.cadlog:hover{
+    background-color: rgb(40, 80, 3);
+}
+.cadlog:focus{
+    background-color: rgb(40, 60, 3);
+}
+
 #ahaa {
     margin: 30px 0px 0px 0px;
     align-self: center;
@@ -182,6 +194,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(to right, #F6FFF8, rgb(74, 112, 28, 0.5));
 }
 
 #tela2 {
@@ -191,10 +204,21 @@ h1{
     display: none;
 }
 
+#listardireita{
+    height: 100%;
+    width: 50%;
+    background-image: linear-gradient(to right, #F6FFF8, rgb(74, 112, 28, 0.5));
+}
+#listaresquerda{
+    height: 100%;
+    width: 50%;
+}
+
 .fundo {
     height: 100%;
     width: 100%;
     background-color: #F6FFF8;
+    display: flex;
 }
 
 #lista {
@@ -206,7 +230,7 @@ h1{
 
 #tela3 {
     height: 90%;
-    background-color: lawngreen;
+    background-color: #F6FFF8;
     display: flex;
     align-items: center;
     display: none;
@@ -225,8 +249,10 @@ h1{
 #tela3direita {
     height: 100%;
     width: 50%;
-    background-color: #4A701C;
+    background-image: linear-gradient(to right, #F6FFF8, rgb(74, 112, 28, 0.5));
     display: flex;
+    
+    
 }
 
 #tela4 {
@@ -235,6 +261,7 @@ h1{
     display: flex;
     display: none;
 }
+
 #tela4esquerda{
     flex-direction: column;
     display: flex;
@@ -243,16 +270,12 @@ h1{
     width: 50%;
     height: 100%;
 }
+
 #tela4direita{
     width: 50%;
     height: 100%;
     display: flex;
-    background-color: #4A701C;
-}
-#despedida{
-    width: 100%;
-    height: 100%;
-    opacity: 0.6;
+    background-image: linear-gradient(to right, #F6FFF8, rgb(74, 112, 28, 0.5));
 }
 
 #excluir {
