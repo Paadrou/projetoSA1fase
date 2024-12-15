@@ -113,13 +113,12 @@ function editar() {
             camposenha.value = null
             campoNovaSenha.value = null
             campoNovoNome.value = null
-            
+
+            listagemsenhas.innerHTML.remove()
+            listar()
 
             nomes(posnome) = novoNome
             senhas(possenha) = novaSenha
-
-            alert(nomes)
-
 
         }
     }
@@ -127,20 +126,20 @@ function editar() {
 
 function listar() {
 
-    listagemsenhas.HTML.remove()
+    let lista2 = ''
+    for (let i = 0; i < [senhas.length]; i++) {
 
-    let item = nomes
+        let item = senhas[i]
+        let item2 = nomes[i]
+        lista2 += "<br>" + 'Usuario:' + item2 + ' Senha:' + item + "<br>----------"
 
-    let lista2 = "----------"
-
-    let item2 = senhas
-
-    lista2 += "<br>" + 'Usuario:' + item + ' Senha: ' + item2 + "<br>----------"
-
+    }
 
     listagemsenhas.innerHTML = lista2
-
 }
+
+
+
 
 function paginaeditar() {
 
@@ -161,6 +160,7 @@ function paginalistar() {
     esconder()
     document.getElementById("tela2").style.display = 'flex'
     listar()
+    listagemsenhas.HTML.remove()
 }
 
 
