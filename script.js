@@ -114,11 +114,10 @@ function editar() {
             campoNovaSenha.value = null
             campoNovoNome.value = null
 
-            listagemsenhas.innerHTML.remove()
             listar()
 
-            nomes(posnome) = novoNome
-            senhas(possenha) = novaSenha
+            nomes[posnome] = novoNome
+            senhas[possenha] = novaSenha
 
         }
     }
@@ -127,10 +126,12 @@ function editar() {
 function listar() {
 
     let lista2 = ''
+    let item = ''
+    let item2 = ''
     for (let i = 0; i < [senhas.length]; i++) {
 
-        let item = senhas[i]
-        let item2 = nomes[i]
+        item = senhas[i]
+        item2 = nomes[i]
         lista2 += "<br>" + 'Usuario:' + item2 + ' Senha:' + item + "<br>----------"
 
     }
