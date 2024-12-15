@@ -34,6 +34,36 @@ h1{
 
 }
 
+#senhacoincidecad{
+    display: none;
+    color: #ff0000;
+}
+
+#senhacoincide{
+    display: none;
+    color: #ff0000;
+}
+
+#senhacoincideex{
+    display: none;
+    color: #ff0000;
+}
+
+#senhacoincideex2{
+    display: none;
+    color: #ff0000;
+}
+
+#nomecoincide{
+    display: none;
+    color: #ff0000;
+}
+
+#nomecoincideex{
+    display: none;
+    color: #ff0000;
+}
+
 #conteiner {
     height: 100%;
     background-color: #ff0000;
