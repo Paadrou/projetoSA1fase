@@ -1,8 +1,6 @@
-nomes = []
-senhas = []
+usuarios = []
 
 function cadastrar() {
-
 
     document.getElementById('nomecoincide').style.display = 'none'
     document.getElementById('senhacoincidecad').style.display = 'none'
@@ -15,8 +13,9 @@ function cadastrar() {
     let repitasenha = camporepitasenha.value
     let nome = camponome.value
 
-    let possenha = senhas.indexOf(senha)
-    let posnome = nomes.indexOf(nome)
+    let posnome = usuarios.indexOf(nome)
+
+    let user = { nome, senha }
 
     if (nome != null) {
 
@@ -28,20 +27,10 @@ function cadastrar() {
                 camposenha.value = null
                 camponome.value = null
 
-                senhas.push(senha)
-                nomes.push(nome)
-
-            } else {
-
-                document.getElementById('senhacoincidecad').style.display = 'inline'
+                usuarios.push(user)
 
             }
-
-        } else {
-            document.getElementById('nomecoincide').style.display = 'inline'
         }
-    } else {
-        document.getElementById('nomecoincide').style.display = 'inline'
     }
 }
 
@@ -49,7 +38,7 @@ function excluir() {
 
     document.getElementById('senhacoincideex2').style.display = 'none'
     document.getElementById('senhacoincideex').style.display = 'none'
-    
+
     let camponome = document.getElementById('inputNomeExcluir')
     let camposenha = document.getElementById('inputSenhaExcluir')
     let camporepitasenha = document.getElementById('inputRepitaSenhaExcluir')
@@ -58,30 +47,30 @@ function excluir() {
     let senha = camposenha.value
     let repitasenha = camporepitasenha.value
 
-    let posnome = nomes.indexOf(nome)
-    let possenha = senhas.indexOf(senha)
 
     if (nome != "" && senha != "") {
 
         if (repitasenha == senha) {
 
-            if (posnome != -1 && possenha != -1) {
+            camponome.value = ''
+            camporepitasenha.value = ''
+            camposenha.value = ''
 
-                camponome.value = null
-                camporepitasenha.value = null
-                camposenha.value = null
-
-                nomes.splice(posnome, 1)
-                senhas.splice(possenha, 1)
-
+            for (let p = 0; p < usuarios.length; p++) {
+                if (usuarios[p].nome == nome && usuarios[p].senha == senha) {
+                    usuarios.splice(p, 1)
+                    break;
+                }
             }
+
         } else {
-            document.getElementById('senhacoincideex2').style.display = 'inline'
+            document.getElementById('senhacoincideex').style.display = 'inline'
         }
     } else {
-        document.getElementById('senhacoincideex').style.display = 'inline'
+        document.getElementById('senhacoincideex2').style.display = 'inline'
     }
 }
+
 
 function editar() {
 
@@ -99,50 +88,45 @@ function editar() {
     let novoNome = campoNovoNome.value
     let novaSenha = campoNovaSenha.value
 
-    let posnome = nomes.indexOf(nome)
-    let possenha = senhas.indexOf(senha)
+    let user2 = { novoNome, novaSenha }
 
     if (nome != "" && senha != "" && novoNome != '' && novaSenha != '') {
 
-        if (posnome != -1 && possenha != -1) {
+        camponome.value = ''
+        camposenha.value = ''
+        campoNovaSenha.value = ''
+        campoNovoNome.value = ''
 
-            camponome.value = null
-            camposenha.value = null
-            campoNovaSenha.value = null
-            campoNovoNome.value = null
+        for (let p = 0; p < usuarios.length; p++) {
 
-            listar()
+            if (usuarios[p].nome == nome && usuarios[p].senha == senha) {
 
-            nomes[posnome] = novoNome
-            senhas[possenha] = novaSenha
+                usuarios[p].nome = novoNome
+                usuarios[p].senha = novaSenha
+                break
 
-        }else{
-
-            document.getElementById('senhacoincide').style.display = 'inline'
-            document.getElementById('nomecoincide').style.display = 'inline'
-            
+            }
         }
+    }
+    else {
+
+        document.getElementById('senhacoincide').style.display = 'inline'
+        document.getElementById('nomecoincide').style.display = 'inline'
 
     }
 }
 
 function listar() {
 
-    let lista2 = ''
-    let item = ''
-    let item2 = ''
-    for (let i = 0; i < [senhas.length]; i++) {
-
-        item = senhas[i]
-        item2 = nomes[i]
-        lista2 += "<br>" + 'Usuario:' + item2 + ' Senha:' + item + "<br>----------"
-
+    let lista = document.getElementById("lista");
+    let paragrafo = "";
+    for (let user of usuarios) {
+        paragrafo +=
+            "Nome:  " + user.nome + "<br>" +
+            "Senha: " + user.senha + "<br>-------<br>";
     }
-
-    listagemsenhas.innerHTML = lista2
+    lista.innerHTML = paragrafo;
 }
-
-
 
 
 function paginaeditar() {
@@ -164,7 +148,7 @@ function paginalistar() {
     esconder()
     document.getElementById("tela2").style.display = 'flex'
     listar()
-    listagemsenhas.HTML.remove()
+
 }
 
 
