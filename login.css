@@ -1,11 +1,11 @@
 @font-face {
     font-family: Farro-Regular;
-    src: url(Farro-Regular.ttf);
+    src: url(Implementos/fonts/Farro-Regular.ttf);
 }
 
 @font-face {
     font-family: ExpletusSans;
-    src: url(ExpletusSans-VariableFont_wght.ttf);
+    src: url(Implementos/fonts/ExpletusSans-VariableFont_wght.ttf);
 }
 
 html,
@@ -37,31 +37,50 @@ h1{
 #senhacoincidecad{
     display: none;
     color: #ff0000;
+    font-family: Farro-Regular;
+    font-size: 12px;
+}
+
+#senhacoincidecad2{
+    display: none;
+    color: #ff0000;
+    font-family: Farro-Regular;
+    font-size: 12px;
 }
 
 #senhacoincide{
     display: none;
     color: #ff0000;
+    font-family: Farro-Regular;
+    font-size: 12px;
 }
 
 #senhacoincideex{
     display: none;
     color: #ff0000;
+    font-family: Farro-Regular;
+    font-size: 12px;
 }
 
 #senhacoincideex2{
     display: none;
     color: #ff0000;
+    font-family: Farro-Regular;
+    font-size: 12px;
 }
 
 #nomecoincide{
     display: none;
     color: #ff0000;
+    font-family: Farro-Regular;
+    font-size: 12px;
 }
 
 #nomecoincideex{
     display: none;
     color: #ff0000;
+    font-family: Farro-Regular;
+    font-size: 12px;
 }
 
 #conteiner {
