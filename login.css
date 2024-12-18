@@ -48,6 +48,20 @@ h1{
     font-size: 12px;
 }
 
+#coincideex{
+    display: none;
+    color: #ff0000;
+    font-family: Farro-Regular;
+    font-size: 12px;
+}
+
+#coincidecd{
+    display: none;
+    color: #ff0000;
+    font-family: Farro-Regular;
+    font-size: 12px;
+}
+
 #senhacoincidecad{
     display: none;
     color: #ff0000;
