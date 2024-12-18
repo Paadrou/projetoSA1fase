@@ -32,16 +32,16 @@
                             <div class="inputimg">
 
                                 <img class="icones" src="implementos/imgs/perfil.png" alt="">
-                                <input class="input" id="inputnome" placeholder="NOME" type="text"><label id="nomecoincide">*inválido</label>
+                                <input class="input" id="inputnome" placeholder="NOME" type="text"><label id="nomecoincide">*incorreto</label>
                             </div>
 
                             <div class="inputimg">
                                 <img class="icones" src="Implementos/imgs/cadeado.png" alt="">
-                                <input class="input" id="inputrepitasenha" placeholder="SENHA" type="password"><label id="senhacoincidecad2">*incorreto</label>
+                                <input class="input" id="inputsenha" placeholder="SENHA" type="password"><label id="senhacoincidecad">*incorreto</label>
                             </div>
                             <div class="inputimg">
                                 <img class="icones" src="Implementos/imgs/cadeado.png" alt="">
-                                <input class="input" id="inputsenha" placeholder="DIGITE A SENHA NOVAMENTE" type="password"><label id="senhacoincidecad">*incorreto</label>
+                                <input class="input" id="inputrepitasenha" placeholder="DIGITE NOVAMENTE" type="password"><label id="senhacoincidecad2">*incorreto</label><label id="coincidecd">*não coincide</label>
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                     <div class="inputsimgs">
                         <div class="inputimg">
                             <img class="icones" src="Implementos/imgs/perfil.png" alt="">
-                            <input class="input" id="inputEditarNome" placeholder="NOME COMPLETO" type="text"><label id="nomecoincide">*incorreto</label>
+                            <input class="input" id="inputEditarNome" placeholder="NOME COMPLETO" type="text"><label id="nomecoincideed">*incorreto</label>
                         </div>
                         <div class="inputimg">
                             <img class="icones" src="Implementos/imgs/cadeado.png" alt="">
@@ -93,11 +93,11 @@
                         </div>
                         <div class="inputimg">
                             <img class="icones" src="Implementos/imgs/perfil.png" alt="">
-                            <input class="input" id="inputEditarNovoNome" placeholder="NOVO NOME" type="text">
+                            <input class="input" id="inputEditarNovoNome" placeholder="NOVO NOME" type="text"><label id="editNome">*incorreto</label>
                         </div>
                         <div class="inputimg">
                             <img class="icones" src="Implementos/imgs/cadeado.png" alt="">
-                            <input class="input" id="inputEditarNovaSenha" placeholder="NOVA SENHA" type="text">
+                            <input class="input" id="inputEditarNovaSenha" placeholder="NOVA SENHA" type="password"><label id="editSenha">*incorreto</label>
                         </div>
                     </div>
                     <button class="cadlog" onclick="editar()">EDITAR</button>
@@ -124,7 +124,7 @@
                             </div>
                             <div class="inputimg">
                                 <img class="icones" src="Implementos/imgs/cadeado.png" alt="">
-                                <input id="inputRepitaSenhaExcluir"  placeholder="DIGITE A SENHA NOVAMENTE" class="input" type="password"><label id="senhacoincideex2">*incorreto</label>
+                                <input id="inputRepitaSenhaExcluir"  placeholder="DIGITE NOVAMENTE" class="input" type="password"><label id="senhacoincideex2">*incorreto</label><label id="coincideex">*não coincide</label>
                             </div>
                         </div>
                         <button onclick="excluir()" class="cadlog">EXLUIR</button>
