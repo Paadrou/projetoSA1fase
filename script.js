@@ -88,6 +88,7 @@ function excluir() {
                     break;
                 } else{
                     alert("Usuário ou Senha não Encontrados.")
+                    break;
                 }
             }
 
