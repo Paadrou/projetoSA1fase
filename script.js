@@ -4,6 +4,7 @@ function cadastrar() {
 
     document.getElementById('nomecoincide').style.display = 'none'
     document.getElementById('senhacoincidecad').style.display = 'none'
+    document.getElementById('senhacoincidecad2').style.display = 'none'
 
     let camposenha = document.getElementById('inputsenha')
     let camporepitasenha = document.getElementById('inputrepitasenha')
@@ -17,8 +18,16 @@ function cadastrar() {
 
     let user = { nome, senha }
 
-    if (nome != null) {
-
+    if (nome == null || nome == "") {
+        document.getElementById('nomecoincide').style.display = 'inline'
+    }
+    if (senha == null || senha == "") {
+        document.getElementById('senhacoincidecad').style.display = 'inline'
+    }
+    if (repitasenha == null || repitasenha == "") {
+        document.getElementById('senhacoincidecad2').style.display = 'inline'
+    }
+    else if (senha != null && senha != "" && nome != null && nome != "") {
         if (posnome == -1) {
 
             if (repitasenha == senha) {
@@ -28,7 +37,8 @@ function cadastrar() {
                 camponome.value = null
 
                 usuarios.push(user)
-
+            } else {
+                document.getElementById('senhacoincidecad2').style.display = 'inline'
             }
         }
     }
@@ -74,8 +84,10 @@ function excluir() {
 
 function editar() {
 
-    document.getElementById('nomecoincide').style.display = 'none'
+    document.getElementById('nomecoincideed').style.display = 'none'
     document.getElementById('senhacoincide').style.display = 'none'
+    document.getElementById('editNome').style.display = 'none'
+    document.getElementById('editSenha').style.display = 'none'
 
     let camponome = document.getElementById('inputEditarNome')
     let camposenha = document.getElementById('inputEditarSenha')
@@ -88,9 +100,21 @@ function editar() {
     let novoNome = campoNovoNome.value
     let novaSenha = campoNovaSenha.value
 
-    let user2 = { novoNome, novaSenha }
+    if(nome == "" || nome == null){
+        document.getElementById('nomecoincideed').style.display = 'inline'
+    }
+    if(senha == "" || senha == null){
+        document.getElementById('senhacoincide').style.display = 'inline'
+    }
+    if(novoNome == "" || novoNome == null){
+        document.getElementById('editNome').style.display = 'inline'
+    }
+    if(novaSenha == "" || novaSenha == null){
+        document.getElementById('editSenha').style.display = 'inline'
+    }
+    
 
-    if (nome != "" && senha != "" && novoNome != '' && novaSenha != '') {
+    else if (nome != "" || nome != null && senha != "" || senha != null && novoNome != "" || novoNome != null && novaSenha != "" || novaSenha != null) {
 
         camponome.value = ''
         camposenha.value = ''
@@ -107,12 +131,6 @@ function editar() {
 
             }
         }
-    }
-    else {
-
-        document.getElementById('senhacoincide').style.display = 'inline'
-        document.getElementById('nomecoincide').style.display = 'inline'
-
     }
 }
 

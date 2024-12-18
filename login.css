@@ -34,6 +34,20 @@ h1{
 
 }
 
+#editNome{
+    display: none;
+    color: #ff0000;
+    font-family: Farro-Regular;
+    font-size: 12px;
+}
+
+#editSenha{
+    display: none;
+    color: #ff0000;
+    font-family: Farro-Regular;
+    font-size: 12px;
+}
+
 #senhacoincidecad{
     display: none;
     color: #ff0000;
@@ -63,6 +77,13 @@ h1{
 }
 
 #senhacoincideex2{
+    display: none;
+    color: #ff0000;
+    font-family: Farro-Regular;
+    font-size: 12px;
+}
+
+#nomecoincideed{
     display: none;
     color: #ff0000;
     font-family: Farro-Regular;
