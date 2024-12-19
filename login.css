@@ -292,6 +292,13 @@ h1{
     height: 100%;
     width: 50%;
     background-image: linear-gradient(to right, #F6FFF8, rgb(74, 112, 28, 0.5));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoSfundo{
+    width: 50%;
 }
 #listaresquerda{
     height: 100%;

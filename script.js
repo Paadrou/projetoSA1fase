@@ -77,21 +77,18 @@ function excluir() {
     } else if (nome != "" || nome != null || senha != "" || senha != null || repitasenha != "" || repitasenha != null) {
 
         if (repitasenha == senha) {
-
+            let mensagem = "Usuário ou senha não encontrados.";
             for (let p = 0; p < usuarios.length; p++) {
                 if (usuarios[p].nome == nome && usuarios[p].senha == senha) {
                     usuarios.splice(p, 1);
                     camponome.value = null
                     camporepitasenha.value = null
                     camposenha.value = null
-                    alert("Usuário Excluído com Sucesso.")
+                    mensagem = "Usuário Excluído com Sucesso.";
                     break;
-                } else{
-                    alert("Usuário ou Senha não Encontrados.")
-                    break;
-                }
+                } 
             }
-
+            alert(mensagem);
         } else {
             document.getElementById('coincideex').style.display = 'inline'
         }
